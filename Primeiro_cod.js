@@ -37,8 +37,20 @@ exam1 = 0;
         console.log("Infelizmente você não atingiu a média do terceiro semestre :(\n" + "Sua média é: " + average3.toFixed(0) + "\n");
     }   
 
+exam0 = 9;
+    price0 = 7;
+exam1 = 10;
+    price1 = 10 - price0;
 
-const AverageEnd = (average1 + average2 + average3) / 3;
+    const average4 = (exam0*price0 + exam1*price1) / (price0+price1);
+
+    if (average4 >= 7) {
+        console.log("Parabéns, você atingiu a média do quarto semestre\n" + "Sua média é: " + average4.toFixed(0) + "\n");
+    } else {
+        console.log("Infelizmente você não atingiu a média do quarto semestre :(\n" + "Sua média é: " + average4.toFixed(0) + "\n");
+    }
+
+const AverageEnd = (average1 + average2 + average3 + average4) / 4;
 
     if (AverageEnd >= 7) {
         console.log("Parabéns, você atingiu a média do esperada e passou de ano\n" + "Sua média é: " + AverageEnd.toFixed(0));
