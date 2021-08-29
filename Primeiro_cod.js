@@ -32,9 +32,9 @@ exam1 = 10;
             console.log("Infelizmente você não atingiu a média do segundo semestre :(\n" + "Sua média é: " + average2.toFixed(1) + "\n")
         }  
 
-exam0 = 3;
+exam0 = 10;
     price0 = 5;
-exam1 = 0;
+exam1 = 10;
     price0 = 10 - price0; 
 
     const average3 = (exam0*price0 + exam1*price1) / (price0+price1);
@@ -64,10 +64,22 @@ exam1 = 10;
 
 const AverageEnd = (average1 + average2 + average3 + average4) / 4;
 
-    if (AverageEnd.situacao (9, 10)) {
-        console.log("Parabéns, você superou a média que estipulamos para este ano e passou de ano\n" + "Sua média é: " + AverageEnd.toFixed(1));
-    } else if (AverageEnd.situacao (7, 8.9)){
-        console.log("Parabéns, você atingiu a média que estipulamos para este ano e passou de ano\n" + "Sua média é: " + AverageEnd.toFixed(1));
-    } else {
-        console.log("Infelizmente você não atingiu a média que estipulamos para este ano e reprovou :(\n" + "Sua média é: " + AverageEnd.toFixed(1));
-    }
+    switch(Math.floor(AverageEnd)){
+        case 10: case 9:
+            console.log('Parabéns, você foi excelente')
+        break
+        case 8: case 7: case 6:
+            console.log('Você foi aprovado')
+        break
+        case 5: 
+            console.log('Você esta de recuperação')
+        break
+        case 4: case 3: case 2:
+            console.log('Você não atigiu a média e reprovou')
+        break
+        case 1: case 0:
+            console.log('Você reprovou mas, pare te ajudar, temos um programa de reforço, você se interresa')
+        break
+        default:
+            console.log('inválida')
+    }   
