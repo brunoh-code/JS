@@ -2,6 +2,8 @@ Number.prototype.situacao = function (inicio, fim) {
     return this >= inicio && this <= fim
 }
 
+console.log("Seja bem-vindo, segue abaixo seu hitórico escolar deste ano!")
+
 exam0 = 10;
     price0 = 6;
 exam1 = 7;
